@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- font poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- feathers icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>KostHunt</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-profile">
+        <a id="user" class="menu" href="">
+          <i data-feather="user"></i>
+        </a>
+        <a class="navbar-logo" href="#">Kost<span>Hunt</span></a>
+      </div>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a id="search" class="menu" href="">
+          <i data-feather="search"></i>
+        </a>
+        <a id="shopping" class="menu" href="">
+          <i data-feather="shopping-bag"></i>
+        </a>
+        <a id="hamburger" class="menu" href="">
+          <i id data-feather="menu"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>
+          Temukan <br />
+          <span>Kost</span> <br />
+          Impianmu
+        </h1>
+        <p>
+          Pilihan kost terbaik untuk <br />
+          kenyamanan tempat tinggal anda
+        </p>
+        <a href="#menu" class="cari">Cari Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-header">
+          <h2>Tentang <span>KostHunt</span></h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="about-info">
+          <div class="about-img">
+            <img src="kost-image/ibukostkuning.jpg" alt="ibukost" />
+            <div class="img-overlay"></div>
+          </div>
+
+          <div class="about-content">
+            <div class="content-wrapper">
+              <h3>Apa itu KostHunt?</h3>
+              <p>
+                KostHunt adalah sebuah aplikasi yang dikembangkan untuk
+                memudahkan orang-orang yang ingin mencari kost di Indonesia.
+                Aplikasi ini bisa digunakan oleh semua orang, baik yang ingin
+                mencari kost atau yang ingin menemukan kost, serta orang yang
+                sedang menjual kost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="menu-header">
+          <h2>Pilihan <span>KostHunt</span></h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="kost-list">
+          <!-- Kost Card 1 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurkuning.jpg"
+              alt="Kost Tahir Ceria"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Kost Tahir Ceria</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Tahir No. 123, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 1.500.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">AC</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">WiFi</span>
+                <span class="facility-tag">Furnished</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 2 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurputihbiru.jpg"
+              alt="Kost Bahagia"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Kost Keluarga Bahagia</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Perintis No. 45, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 1.200.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">Kipas Angin</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">Dapur Bersama</span>
+                <span class="facility-tag">Parkir Motor</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 3 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasuputihbersih.jpg"
+              alt="Kost Sejahtera"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Kost Sejahtera Indah</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Veteran No. 88, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 1.800.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">AC</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">WiFi</span>
+                <span class="facility-tag">Parkir Motor</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 4 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurabu.jpg"
+              alt="Kost Harmoni"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Kost Harmoni Residence</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Pengayoman No. 155, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 2.100.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">AC</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">WiFi</span>
+                <span class="facility-tag">Smart TV</span>
+                <span class="facility-tag">Laundry</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 5 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurbirugelap.jpg"
+              alt="Kost Green"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Green Kost Exclusive</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. A.P. Pettarani No. 45, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 1.950.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">AC</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">WiFi</span>
+                <span class="facility-tag">Taman</span>
+                <span class="facility-tag">Security</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 6 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurhijau.jpg"
+              alt="Kost Putri"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Kost Putri Melati</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Racing Center No. 77, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 1.400.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">AC</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">Dapur Bersama</span>
+                <span class="facility-tag">CCTV</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 7 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurputihblack.jpg"
+              alt="Kost Premium"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Premium Kost Boulevard</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Boulevard No. 234, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 2.500.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">AC</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">WiFi</span>
+                <span class="facility-tag">Gym</span>
+                <span class="facility-tag">Kolam Renang</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Kost Card 8 -->
+          <div class="kost-card">
+            <img
+              class="kost-card-image"
+              src="kamar-image/kasurputihluxury.jpg"
+              alt="Kost Mahasiswa"
+            />
+            <div class="kost-card-content">
+              <h3 class="kost-card-title">Kost Mahasiswa Cendekia</h3>
+              <div class="kost-card-location">
+                <i data-feather="map-pin"></i>
+                <span>Jl. Urip Sumoharjo No. 112, Makassar</span>
+              </div>
+              <div class="kost-card-price">Rp 1.350.000 /bulan</div>
+              <div class="kost-card-facilities">
+                <span class="facility-tag">Kipas Angin</span>
+                <span class="facility-tag">Kamar Mandi Dalam</span>
+                <span class="facility-tag">WiFi</span>
+                <span class="facility-tag">Ruang Belajar</span>
+              </div>
+              <a href="#" class="kost-card-button">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-header">
+          <h2>Hubungi <span>Kami</span></h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Kirim Pesan</button>
+          </form>
+
+          <div class="contact-info">
+            <div class="info-item">
+              <i data-feather="map-pin"></i>
+              <h3>Alamat</h3>
+              <p>Desa Siddo Kab Barru</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3528.1744149577494!2d119.62279587497652!3d-4.2377171957361535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d95906ab81869db%3A0xbdb867d18d33b203!2sRezki%20Ayra!5e1!3m2!1sid!2sid!4v1731311675001!5m2!1sid!2sid"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>KostHunt</h3>
+          <p>Temukan kost impianmu dengan mudah dan cepat bersama KostHunt.</p>
+          <div class="social-links">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Link Cepat</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#menu">Kost</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Hubungi Kami</h3>
+          <p>
+            <i data-feather="map-pin"></i> Siddo, Kec. Soppeng Riaja, Kabupaten
+            Barru, Sulawesi Selatan
+          </p>
+          <p><i data-feather="phone"></i> +62 822 8037 2670</p>
+          <p><i data-feather="mail"></i> rian.mallanti@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 KostHunt. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- feathers icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
