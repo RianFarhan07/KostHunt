@@ -108,6 +108,90 @@ body {
   display: none;
 }
 
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: white;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  /* agar muncul dari atas */
+  transform-origin: top;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  padding-left: 3px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: #333;
+}
+
+.navbar .shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background-color: var(--primary);
+  width: 30rem;
+  height: 100vh;
+  padding: 0 1.5rem;
+  transition: 0.3s linear;
+}
+
+.navbar .shopping-cart.active {
+  right: 0;
+}
+
+.navbar .shopping-cart .card-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed;
+}
+
+.navbar .shopping-cart h3 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar .shopping-cart .item-price {
+  font-size: 1.2rem;
+}
+
+.navbar .shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.navbar .shopping-cart .remove-item:hover {
+  color: red;
+}
+
+.navbar .shopping-cart img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
 /* Hero Section */
 .hero {
   background-image: url(kost-image/vinicius-amnx-amano-17NCG_wOkMY-unsplash.jpg);
@@ -364,6 +448,12 @@ container {
   margin-bottom: 15px;
 }
 
+.kost-card-price span {
+  text-decoration: line-through;
+  font-size: 0.7rem;
+  color: #666;
+}
+
 .kost-card-facilities {
   display: flex;
   gap: 10px;
@@ -380,12 +470,18 @@ container {
   color: var(--on-primary);
 }
 
+.choice {
+  display: flex;
+  align-items: center;
+}
+
 .kost-card-button {
   display: inline-block;
   padding: 8px 20px;
   color: white;
   align-self: flex-start; /* Align button to the left */
   margin-top: auto;
+  font-size: 0.8rem;
   border-radius: 5px;
   transition: all 0.3s ease;
   background: transparent;
@@ -414,6 +510,28 @@ container {
   background: var(--primary);
   color: var(--on-primary);
   border-color: var(--primary-variant);
+}
+
+.choice .shopping-cart-link {
+  border: 1px solid var(--primary-variant);
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 80px;
+  display: flex;
+}
+
+.choice .shopping-cart {
+  color: var(--primary-variant);
+  cursor: pointer;
+}
+
+.choice .shopping-cart-link:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.choice .shopping-cart-link:hover .shopping-cart {
+  color: var(--on-primary);
 }
 
 .contact-wrapper {
@@ -637,6 +755,76 @@ container {
   transition: transform 0.3s ease;
 }
 
+/* Modal Box */
+/* Item Detail */
+.modal {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--on-primary);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  animation: slideToBottm 0.5s ease;
+}
+
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content {
+  color: black;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 10rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content a {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--primary);
+  color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+/* Animation */
+@keyframes slideToBottm {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 /* Media Queries */
 
 /* Laptop */
@@ -658,6 +846,10 @@ container {
   .contact-wrapper {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .kost-card-button {
+    font-size: 1.2rem;
   }
 }
 
@@ -753,6 +945,11 @@ container {
     width: 20px;
     height: 20px;
   }
+
+  .modal-content {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
 }
 
 /* Mobile L */
@@ -810,6 +1007,11 @@ container {
     width: 100%;
     height: 100%;
     border: none;
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 }
 

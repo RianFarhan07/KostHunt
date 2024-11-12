@@ -45,6 +45,46 @@
           <i id data-feather="menu"></i>
         </a>
       </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="Cari Kost..." />
+        <label for="search-box">
+          <i data-feather="search"></i>
+        </label>
+      </div>
+      <!-- Search Form End -->
+
+      <!-- Shopping Cart Start -->
+      <div class="shopping-cart">
+        <div class="card-item">
+          <img src="kamar-image/kasurkuning.jpg" alt="" />
+          <div class="item-detail">
+            <h3>Kost Tahir Ceria</h3>
+            <div class="item-price">Rp 1.500.000</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+
+        <div class="card-item">
+          <img src="kamar-image/kasurputihblack.jpg" alt="" />
+          <div class="item-detail">
+            <h3>Premium Kost Boulevard</h3>
+            <div class="item-price">Rp 2.500.000</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+
+        <div class="card-item">
+          <img src="kamar-image/kasurbirugelap.jpg" alt="" />
+          <div class="item-detail">
+            <h3>Green Kost Exclusive</h3>
+            <div class="item-price">Rp 1.950.000</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping Cart End -->
     </nav>
     <!-- Navbar End -->
 
@@ -118,14 +158,21 @@
                 <i data-feather="map-pin"></i>
                 <span>Jl. Tahir No. 123, Makassar</span>
               </div>
-              <div class="kost-card-price">Rp 1.500.000 /bulan</div>
+              <div class="kost-card-price">
+                Rp 1.500.000 /bulan <span>Rp 2.000.000 /bulan</span>
+              </div>
               <div class="kost-card-facilities">
                 <span class="facility-tag">AC</span>
                 <span class="facility-tag">Kamar Mandi Dalam</span>
                 <span class="facility-tag">WiFi</span>
                 <span class="facility-tag">Furnished</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -149,7 +196,12 @@
                 <span class="facility-tag">Dapur Bersama</span>
                 <span class="facility-tag">Parkir Motor</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -173,7 +225,12 @@
                 <span class="facility-tag">WiFi</span>
                 <span class="facility-tag">Parkir Motor</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -198,7 +255,12 @@
                 <span class="facility-tag">Smart TV</span>
                 <span class="facility-tag">Laundry</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -223,7 +285,12 @@
                 <span class="facility-tag">Taman</span>
                 <span class="facility-tag">Security</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -247,7 +314,12 @@
                 <span class="facility-tag">Dapur Bersama</span>
                 <span class="facility-tag">CCTV</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -272,7 +344,12 @@
                 <span class="facility-tag">Gym</span>
                 <span class="facility-tag">Kolam Renang</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
 
@@ -296,7 +373,12 @@
                 <span class="facility-tag">WiFi</span>
                 <span class="facility-tag">Ruang Belajar</span>
               </div>
-              <a href="#" class="kost-card-button">Lihat Detail</a>
+              <div class="choice">
+                <a href="#" class="kost-card-button">Lihat Detail</a>
+                <a href="#" class="shopping-cart-link"
+                  ><i class="shopping-cart" data-feather="shopping-cart"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
@@ -390,6 +472,36 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Modal Box Item Detail Start -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a class="close-icon" href="#"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="kamar-image/kasurkuning.jpg" alt="kost=tahir-ceria" />
+          <div class="product-content">
+            <h3>Kost Tahir Ceria</h3>
+            <div class="product-price">Rp 1.350.000 /bulan</div>
+            <div class="product-location">
+              <i data-feather="map-pin"></i>
+              <span>Jl. Thir No.123, Makassar</span>
+            </div>
+            <div class="product-facilities">
+              <span class="facility-tag">Kipas Angin</span>
+              <span class="facility-tag">Kamar Mandi Dalam</span>
+              <span class="facility-tag">WiFi</span>
+              <span class="facility-tag">Ruang Belajar</span>
+            </div>
+            <p>SISA 1 KAMAR</p>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i
+              ><span>tambahkan ke keranjang</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box Item Detail End -->
 
     <!-- feathers icons -->
     <script>
