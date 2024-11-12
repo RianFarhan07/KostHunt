@@ -201,31 +201,61 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-}
-
-.hero::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  pointer-events: none; /* Memastikan gradasi tidak mengganggu interaksi */
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 1%,
-    /* Mengurangi opacity di bagian bawah */ rgba(255, 255, 255, 0.8) 5%,
-    /* Menambah step transisi */ rgba(255, 255, 255, 0.4) 15%,
-    /* Menambah step transisi */ rgba(255, 255, 255, 0) 30%
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.4) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.4) 90%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 
+/* .hero::after { */
+/* content: ""; */
+/* display: block; */
+/* position: absolute; */
+/* width: 100%; */
+/* height: 100%; */
+/* bottom: 0; */
+/* pointer-events: none; Memastikan gradasi tidak mengganggu interaksi */
+/* background: linear-gradient( */
+/* 0deg, */
+/* rgba(255, 255, 255, 1) 1%, */
+/* Mengurangi opacity di bagian bawah rgba(255, 255, 255, 0.8) 5%, */
+/* Menambah step transisi rgba(255, 255, 255, 0.4) 15%, */
+/* Menambah step transisi rgba(255, 255, 255, 0) 30% */
+/* ); */
+/* } */
+
+.hero .mask-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  position: absolute;
+  /* background: red; */
+  inset: 0;
+  -webkit-mask-image: url(kost-image/masking-fiz.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-image: url(kost-image/masking-fiz.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
 .hero .content {
-  position: relative; /* Changed from absolute */
+  position: fixed; /* Changed to relative to remove mask */
   width: 40%;
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   padding: 1.4rem;
   text-align: left;
+  z-index: 100;
   margin-top: 3rem;
 }
 
@@ -250,29 +280,31 @@ body {
   mix-blend-mode: darken;
 }
 
-.hero .content .cari {
+.hero .cari {
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1rem;
   color: black;
+  top: 100px;
+  left: 49%;
+  transform: translate(-50%);
+  align-items: center;
   background-color: #ffb800;
   border-radius: 4px;
   font-weight: 500;
   text-decoration: none;
-  position: relative;
-  z-index: 2;
+  position: fixed;
   box-shadow: 0 2px 10px rgba(255, 184, 0, 0.2); /* Default shadow */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition curve */
 }
 
-.hero .content .cari:hover {
-  transform: translateY(-2px);
+.hero .cari:hover {
   box-shadow: 0 10px 20px rgba(255, 184, 0, 0.4),
     0 0 20px rgba(255, 184, 0, 0.2), 0 0 30px rgba(255, 184, 0, 0.1);
   background-color: #ffc126; /* Slightly lighter on hover */
 }
 
-.hero .content .cari:active {
+.hero .cari:active {
   transform: translateY(0);
   box-shadow: 0 5px 15px rgba(255, 184, 0, 0.3);
   background-color: #ffb800;
@@ -340,6 +372,12 @@ container {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  --webkit-mask-image: url(svg/house-svgrepo-com.svg);
+  --webkit-mask-size: 50%;
+  --webkit-mask-repeat: no-repeat;
+  mask-image: url(svg/house-with-money-symbol-svgrepo-com.svg);
+  mask-size: 50%;
+  mask-repeat: no-repeat;
 }
 
 .about-img:hover img {
